@@ -15,11 +15,14 @@ const PlayerFactory = (name, mark) => {
     }
 }
 
-const Board = (function(){
+const Board = (function(dim){
 
     const element = document.createElement('div');
     element.classList.add('board');
 
+    const reset = () => {
+
+    } 
     const SquareFactory = () => {
         const element = document.createElement('div');
         element.classList.add('square');
@@ -35,11 +38,24 @@ const Board = (function(){
             
         }
 
-        return {element}
+        return {element, populate}
 
     }
 
-}())
+    const array = [];
+    for (let i = 0; i < dim; i++) {
+        cols = [];
+        for (let j = 0; j < dim; j++) {
+            cols.push(SquareFactory());
+        }
+
+        array.push(cols);
+
+    }
+
+    console.log(array)
+
+}(3))
 
 const p1 = PlayerFactory("James", 'X');
 p1.introduceSelf();
