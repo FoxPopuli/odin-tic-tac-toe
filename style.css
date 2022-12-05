@@ -13,3 +13,30 @@
 h1 {
     text-align: center;
 }
+.board {
+    /* width: 250px;
+    height: 500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    /* text-align: center; */
+    /* margin: 10px; */
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
